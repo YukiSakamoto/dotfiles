@@ -11,11 +11,12 @@ set hintkeys=hjklasdfgyuiopqwernmzxcvb
 style -name commandline-ime chrome://* #dactyl-commandline-command input {ime-mode: inactive;}
 
 set scroll=5
-noremap j <C-d>
-noremap k <C-u>
-noremap h <S-h>
-noremap l <S-l>
-noremap s gi
 
-noremap ; :
-noremap : ;
+map -builtin j <C-d>
+map -builtin k <C-u>
+map -builtin h <S-h>
+map -builtin l <S-l>
+map -builtin s gi
+
+map -builtin ; :
+map -builtin : ;
