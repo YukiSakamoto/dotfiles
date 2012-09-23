@@ -1,0 +1,21 @@
+"hg6823
+
+loadplugins '\.(js|penta)$'
+group user
+
+" vim: set ft=pentadactyl:
+
+
+set maxitems=6
+set hintkeys=hjklasdfgyuiopqwernmzxcvb
+style -name commandline-ime chrome://* #dactyl-commandline-command input {ime-mode: inactive;}
+
+set scroll=5
+noremap j <C-d>
+noremap k <C-u>
+noremap h <S-h>
+noremap l <S-l>
+noremap s gi
+
+noremap ; :
+noremap : ;
