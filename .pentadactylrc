@@ -10,6 +10,8 @@ set maxitems=6
 set hintkeys=hjklasdfgyuiopqwernmzxcvb
 style -name commandline-ime chrome://* #dactyl-commandline-command input {ime-mode: inactive;}
 
+highlight Hint font-family: monospace; font-size: 15px; font-weight: normal; color: lightyellow; background-color: red; border-color: ButtonShadow; border-width: 0px; border-style: solid; padding: 0px 2px 0px 2px;
+
 set scroll=5
 
 map -builtin j <C-d>
