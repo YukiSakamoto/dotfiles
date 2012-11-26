@@ -1,6 +1,6 @@
 #!/bin/sh
 
-Conf_Files=(.vimrc .gvimrc .zshrc .zshrc.mine .irbrc .screenrc .pentadactylrc)
+Conf_Files=(.vimrc .gvimrc .zshrc .zshrc.mine .irbrc .screenrc .pentadactylrc .tmux.conf)
 
 for f_name in ${Conf_Files[@]} 
 do
