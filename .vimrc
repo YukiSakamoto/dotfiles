@@ -13,8 +13,9 @@ set nostartofline
 set ignorecase
 set smartcase
 set laststatus=2
-
+set visualbell t_vb=
 set tabstop=4
+set wildmenu
 
 " When using vim build on mac, Delete key does not work.
 set backspace=2
@@ -85,6 +86,7 @@ map <Leader>r :cclose<cr>:SCCompileRun<cr>
 function! Set_C_CPP_Common()
 	setl cindent
 	set path=.,/usr/local/include,/usr/include
+	setl tabstop=8 expandtab shiftwidth=4 softtabstop=4  
 	"map <Leader>r <Esc>:!./a.out<CR>
 endfunction
 
