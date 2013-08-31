@@ -14,8 +14,6 @@ set ignorecase
 set smartcase
 set laststatus=2
 set visualbell t_vb=
-set tabstop=4
-set softtabstop=0
 set wildmenu
 set foldmethod=manual
 set modeline
@@ -27,6 +25,23 @@ set statusline=%f%m%=%y[%{&fileencoding}][%{&fileformat}]
 
 imap <silent> <C-C> <C-R>=string(eval(input("Calculate: ")))<CR>
 " }}}
+
+"	Syntax and Indent	{{{
+syntax on
+set autoindent
+set smartindent
+
+"	tab( reference: http://peacepipe.toshiville.com/2006/05/vimrc-vim.html )
+set tabstop=4
+set softtabstop=0
+set shiftwidth=4
+
+filetype on
+filetype indent on
+filetype plugin on
+highlight PreProc ctermfg=lightgreen
+
+"}}}
 
 "	Key Mapping	{{{ 1
 :nmap <Space> <PageDown>
@@ -54,15 +69,6 @@ let g:netrw_liststyle=3
 "set enc=euc-jp
 " }}}
 
-"	Syntax and Indent	{{{
-syntax on
-set autoindent
-set smartindent
-filetype on
-filetype indent on
-filetype plugin on
-highlight PreProc ctermfg=lightgreen
-"}}}
 
 "	QuickFix etc... 	{{{
 augroup greopen
@@ -129,7 +135,7 @@ function! SetRubySettings()
 	"Fold Related
 	set foldmethod=indent
 	set foldlevel=0
-	set foldnestmax=1
+	set foldnestmax=2
 endfunction
 
 autocmd FileType ruby	call SetRubySettings()
