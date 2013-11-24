@@ -1,9 +1,10 @@
+
 noremap j 8j
 noremap k 8k
 "noremap h 8h
 "noremap l 8l
 noremap s gi
-"set guioptions=nrb
+set gui=tabs
 set focuscontent
 set complete=sl
 set incsearch
@@ -17,10 +18,12 @@ noremap H 16h
 noremap L 16l
 noremap J 16j
 noremap K 16k
-let g:hintsio="io" 
-let g:hintchars="HJKLASDFGYUIOPQWERTNMZXCVB"
-hi Hint font-family:monospace; font-size:14px; color:white; background-color:red; border-color:ButtonShadow; border-width:0px; border-style:solid; padding:0px 1px 0px 1px; 
+"let g:hintsio="io" 
+"let g:hintchars="HJKLASDFGYUIOPQWERTNMZXCVB"
+set hintchars=ifjklasdhguonmerwc
+"hi Hint font-family:monospace; font-size:14px; color:white; background-color:red; border-color:ButtonShadow; border-width:0px; border-style:solid; padding:0px 1px 0px 1px; 
 javascript liberator.beep = function() true
+hi Hint z-index:5000; font-size:14px; color:white; background-color:red; border-color:ButtonShadow; border-width:0px; border-style:solid; padding:0px 2px 0px 2px; position:absolute; font-family: Menlo, Consolas, Monaco, monospace; text-transform: uppercase;
 
-noremap ; :
-noremap : ;
+
+nmap ; :
