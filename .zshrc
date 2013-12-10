@@ -18,7 +18,7 @@ case ${UID} in
   PROMPT2="%B%{${fg[red]}%}%_#%{${reset_color}%}%b "
   SPROMPT="%B%{${fg[red]}%}%r is correct? [n,y,a,e]:%{${reset_color}%}%b "
   [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] &&
-    PROMPT="%{${fg[white]}%}${HOST%%.*} ${PROMPT}"
+    PROMPT="%{${fg[cyan]}%}${HOST%%.*} ${PROMPT}"
   ;;
 *)
   #PROMPT="%{${fg[red]}%}%/%%%{${reset_color}%} "
@@ -26,7 +26,7 @@ case ${UID} in
   PROMPT2="%{${fg[red]}%}%_%%%{${reset_color}%} "
   SPROMPT="%{${fg[red]}%}%r is correct? [n,y,a,e]:%{${reset_color}%} "
   [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] &&
-    PROMPT="%{${fg[white]}%}${HOST%%.*} ${PROMPT}"
+    PROMPT="%{${fg[cyan]}%}${HOST%%.*} ${PROMPT}"
   ;;
 esac
 
@@ -151,10 +151,12 @@ kterm*|xterm*)
   ;;
 esac
 
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
+
 #PATH=$PATH:/opt/local/bin
 #PATH=$PATH:~/util-script/:/opt/local/bin
 EDITOR=/usr/bin/vim
-export EDITOR PATH
+export EDITOR PATH 
 
 #export PORTS_HOME=/opt/local
 
