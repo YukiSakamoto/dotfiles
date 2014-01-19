@@ -23,6 +23,15 @@ set foldcolumn=3
 set backspace=2
 set statusline=%f%m%=%y[%{&fileencoding}][%{&fileformat}]
 
+set foldtext=MyFoldText()
+function! MyFoldText()
+	let line = getline(v:foldstart)
+    let subline = substitute(line, '/\*\|\*/\|{{{\d\=', '', 'g')	" }}} dummy
+	let length = v:foldend - v:foldstart
+	"return v:folddashes . subline . "[ " . length . " lines ]"
+	return subline . "[ " . length . " lines ]"
+endfunction
+
 imap <silent> <C-C> <C-R>=string(eval(input("Calculate: ")))<CR>
 " }}}
 
@@ -43,13 +52,13 @@ highlight PreProc ctermfg=lightgreen
 
 "}}}
 
-"	Key Mapping	{{{ 1
+"	Key Mapping	{{{ 
 :nmap <Space> <PageDown>
 :nmap <S-Space> <PageUp>
 :nmap ; :
 " }}}
 
-"	Gtags Related {{{ 1
+"	Gtags Related {{{ 
 map <C-g> :Gtags
 map <C-h> :Gtags -f %<CR>
 map <C-j> :GtagsCursor<CR>
@@ -89,6 +98,9 @@ function! Set_C_CPP_Common()
 	set path=.,/usr/local/include,/usr/include
 	setl tabstop=8 expandtab shiftwidth=4 softtabstop=4  
 	"map <Leader>r <Esc>:!./a.out<CR>
+	set foldmethod=syntax
+	set foldlevel=0
+	set foldnestmax=2
 endfunction
 
 function! Set_CPP_Settings()
@@ -139,6 +151,11 @@ function! SetRubySettings()
 endfunction
 
 autocmd FileType ruby	call SetRubySettings()
+" }}}
+"
+" 	BioNetGen {{{2
+au BufRead,BufNewFile *.bngl set filetype=bngl
+"
 " }}}
 "
 " }}}
@@ -192,6 +209,8 @@ map <silent> [Tag]p :tabprevious<CR>
 map <silent> [Tag]l :tabs<CR>
 " list tabs
 " }}}
+"
+"
 
 " vim: foldmethod=marker
 " vim: foldcolumn=3
