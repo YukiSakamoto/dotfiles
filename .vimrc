@@ -98,11 +98,9 @@ function! Set_C_CPP_Common()
 	set path=.,/usr/local/include,/usr/include
 	setl tabstop=8 expandtab shiftwidth=4 softtabstop=4  
 	set foldmethod=syntax
-	set foldnestmax=3
+	set foldnestmax=5
 	"map <Leader>r <Esc>:!./a.out<CR>
-	set foldmethod=syntax
-	set foldlevel=0
-	set foldnestmax=2
+	set foldlevel=1
 endfunction
 
 function! Set_CPP_Settings()
