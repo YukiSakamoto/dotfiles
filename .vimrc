@@ -97,6 +97,8 @@ function! Set_C_CPP_Common()
 	setl cindent
 	set path=.,/usr/local/include,/usr/include
 	setl tabstop=8 expandtab shiftwidth=4 softtabstop=4  
+	set foldmethod=syntax
+	set foldnestmax=3
 	"map <Leader>r <Esc>:!./a.out<CR>
 	set foldmethod=syntax
 	set foldlevel=0
@@ -152,6 +154,8 @@ endfunction
 
 autocmd FileType ruby	call SetRubySettings()
 " }}}
+
+au BufRead,BufNewFile *.bngl set filetype=bngl
 "
 " 	BioNetGen {{{2
 au BufRead,BufNewFile *.bngl set filetype=bngl
