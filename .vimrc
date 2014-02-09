@@ -108,6 +108,7 @@ function! Set_CPP_Settings()
 	"map <Leader>c <Esc>:!g++ %<CR>
 	"map <Leader>C <Esc>:!clang++ %<CR>
 	set path+=/usr/include/c++/4.2.1
+	set matchpairs+=<:>
 endfunction
 
 function! Set_C_Settings()
