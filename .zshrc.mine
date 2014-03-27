@@ -1,5 +1,5 @@
 alias macvim="open -a macvim"
-alias vim="/usr/local/bin/vim"
+#alias vim="/usr/local/bin/vim"
 alias ghc="/usr/bin/ghc"
 alias ghci="/usr/bin/ghci"
 alias firefox="open -a firefox"
