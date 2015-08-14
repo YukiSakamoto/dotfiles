@@ -137,6 +137,9 @@ function! SetPythonSettings()
 	"map <Leader>p <Esc>:!python %<CR>
 endfunction
 
+au BufRead,BufNewFile *.pyx set filetype=pyrex
+au BufRead,BufNewFile *.pxi set filetype=pyrex
+au BufRead,BufNewFile *.pxd set filetype=pyrex
 autocmd FileType python	call SetPythonSettings()
 autocmd FileType pyrex	call SetPythonSettings()
 " }}}
