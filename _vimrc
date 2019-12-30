@@ -6,7 +6,7 @@ set showcmd
 set showmode
 set incsearch
 nnoremap <ESC><ESC> :nohlsearch<CR>
-set background=dark
+set background=light
 set nocompatible
 set cursorline
 set nostartofline
@@ -49,6 +49,8 @@ filetype on
 filetype indent on
 filetype plugin on
 highlight PreProc ctermfg=lightgreen
+
+colorscheme solarized
 
 "}}}
 
