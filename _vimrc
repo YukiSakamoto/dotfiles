@@ -219,6 +219,16 @@ map <silent> [Tag]l :tabs<CR>
 " }}}
 "
 "
+" To use the following command, 
+"  1. put plug.vim into ~/.vim/autoload/
+"     plug.vim can be obtained by `git clone https://github.com/junegunn/vim-plug``
+"  2. in the vim, run :PlugInstall
+call plug#begin()
+Plug 'mattn/vim-lexiv'
+Plug 'lambdalisue/fern.vim'
+Plug 'thinca/vim-quickrun'
+Plug 'ctrlpvim/ctrlp.vim'
+call plug#end()
 
 " vim: foldmethod=marker
 " vim: foldcolumn=3
