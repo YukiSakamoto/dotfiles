@@ -13,3 +13,4 @@
 #alias vol="volume"
 #alias it="itunes"
 zstyle ':completion:*:(processes|jobs)' menu yes select=2
+export PATH=$PATH:$HOME/local/bin
