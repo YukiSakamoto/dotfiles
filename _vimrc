@@ -71,6 +71,9 @@ map <C-p> :cp<CR>
 "	Explorer(vim default implemented filer related)	{{{1
 nmap <Leader>e :e .<CR>
 let g:netrw_liststyle=3
+let g:netrw_sizestyle="H"
+let g:netrw_timefmt="%Y/%m/%d(%a) %H:%M:%S"
+let g:netrw_preview=1
 " }}}
 
 "	Japanese	{{{ 
@@ -229,6 +232,20 @@ Plug 'lambdalisue/fern.vim'
 Plug 'thinca/vim-quickrun'
 Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()
+
+" check the specified plugin is installed
+function s:is_plugged(name)
+    if exists('g:plugs') && has_key(g:plugs, a:name) && isdirectory(g:plugs[a:name].dir)
+        return 1
+    else
+        return 0
+    endif
+endfunction
+
+"Fern setting
+if s:is_plugged("fern.vim")
+	nnoremap <C-n> :Fern . -reveal=% -drawer -toggle -width=40<CR>
+endif
 
 " vim: foldmethod=marker
 " vim: foldcolumn=3
